@@ -1,0 +1,97 @@
+<%= form_with(model: company) do |form| %>
+  <% if company.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(company.errors.count, "error") %> prohibited this company from being saved:</h2>
+
+      <ul>
+        <% company.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :razao_social, style: "display: block" %>
+    <%= form.text_field :razao_social %>
+  </div>
+
+  <div>
+    <%= form.label :nome_fantasia, style: "display: block" %>
+    <%= form.text_field :nome_fantasia %>
+  </div>
+
+  <div>
+    <%= form.label :cnpj, style: "display: block" %>
+    <%= form.text_field :cnpj %>
+  </div>
+
+  <div>
+    <%= form.label :endereco_cep, style: "display: block" %>
+    <%= form.text_field :endereco_cep %>
+  </div>
+
+  <div>
+    <%= form.label :endereco_rua, style: "display: block" %>
+    <%= form.text_field :endereco_rua %>
+  </div>
+
+  <div>
+    <%= form.label :endereco_numero, style: "display: block" %>
+    <%= form.text_field :endereco_numero %>
+  </div>
+
+  <div>
+    <%= form.label :endereco_complemento, style: "display: block" %>
+    <%= form.text_field :endereco_complemento %>
+  </div>
+
+  <div>
+    <%= form.label :endereco_bairro, style: "display: block" %>
+    <%= form.text_field :endereco_bairro %>
+  </div>
+
+  <div>
+    <%= form.label :endereco_cidade, style: "display: block" %>
+    <%= form.text_field :endereco_cidade %>
+  </div>
+
+  <div>
+    <%= form.label :endereco_uf, style: "display: block" %>
+    <%= form.text_field :endereco_uf %>
+  </div>
+
+  <div>
+    <%= form.label :telefone_fixo, style: "display: block" %>
+    <%= form.text_field :telefone_fixo %>
+  </div>
+
+  <div>
+    <%= form.label :telefone_celular, style: "display: block" %>
+    <%= form.text_field :telefone_celular %>
+  </div>
+
+  <div>
+    <%= form.label :email, style: "display: block" %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div>
+    <%= form.label :site, style: "display: block" %>
+    <%= form.text_field :site %>
+  </div>
+
+  <div>
+    <%= form.label :created_user_id, style: "display: block" %>
+    <%= form.number_field :created_user_id %>
+  </div>
+
+  <div>
+    <%= form.label :changed_user_id, style: "display: block" %>
+    <%= form.number_field :changed_user_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
