@@ -55,6 +55,7 @@ group :development, :test do
   gem "factory_bot_rails"
   gem "shoulda-matchers"
   gem "faker"
+  gem "rubocop-rails"
   gem "rubocop-rspec"
 end
 
@@ -75,3 +76,6 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "cpf_cnpj"
+gem "validators"
